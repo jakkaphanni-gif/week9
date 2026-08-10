@@ -19,8 +19,11 @@
                 <tbody>
 
                     @foreach ($blog2 as $item)
+                        @php
+                            $i = $loop->iteration;
+                        @endphp
                         <tr>
-                            <th scope="row">{{ $item->id }}</th>
+                            <th scope="row">{{ $i }}</th>
                             <td class="text-start">{{ Str::limit($item->title, 20) }}</td>
                             {{-- <td class="text-start">{{ Str::limit($item->content, 150) }}</td> --}}
                             <td class="text-center">
@@ -32,7 +35,8 @@
                             </td>
 
                             <td><a href="{{ route('delete', $item->id) }}" class="btn btn-danger"
-                                    onclick="return confirm('คุณต้องการลบบทความนี้จริงหรือไม่?')">ลบ</a></td>
+                                    onclick="return confirm('คุณต้องการลบบทความนี้ {{ $item->title }} จริงหรือไม่?')">ลบ</a>
+                            </td>
 
                         </tr>
                     @endforeach

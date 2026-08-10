@@ -35,7 +35,7 @@
                         <a class="nav-link" href="{{ route('blog2') }}">บทความ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('create') }}">เพิ่มสินค้าใหม่</a>
+                        <a class="nav-link" href="{{ route('create') }}">เพิ่มบทความ</a>
                     </li>
 
                 </ul>
